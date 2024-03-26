@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ game.title }}
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>{{ game.title }}</h1>
+    <h2>{{ game.date }}</h2>
+
+    <div class="alert alert-info">
+        <p>{{ game.feedback }}</p>
+
+        <a href="/all_games/{{ game.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/all_games/{{ game.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+</div>
+{% endblock %}

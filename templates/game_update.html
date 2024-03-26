@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Обновление записей об игре
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Обновление записей об игре</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" value="{{ game.title }}"><br>
+        <textarea name="date" id="date" class="form-control">{{ game.date }}</textarea><br>
+        <textarea name="feedback" id="feedback" class="form-control">{{ game.feedback }}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Обновить">
+    </form>
+</div>
+{% endblock %}

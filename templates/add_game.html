@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление информации о пройденной игре
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Добавление информации о пройденной игре</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Введите название игры"><br>
+        <textarea name="date" id="date" class="form-control" placeholder="Введите год выхода игры"></textarea><br>
+        <textarea name="feedback" id="feedback" class="form-control" placeholder="Введите ваше мнение об игре"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+{% endblock %}
